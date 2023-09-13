@@ -1,0 +1,125 @@
+/* Reset some default styles */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e0c946;
+    text-shadow: #9e5353;
+}
+
+/* Video styles */
+.featured-video {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Video list styles */
+.video-list {
+    text-align: center;
+}
+
+.video-list h2 {
+    margin-bottom: 20px;
+}
+
+.video-list ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-list li {
+    margin: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* Add these styles for the play buttons */
+.play-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #e05500;
+}
+body{
+    background: url("https://res.cloudinary.com/di0n6iipc/image/upload/v1689749838/pexels-moose-photos-1037992_dth26j.jpg");
+    background-size: cover; /* Adjust the size as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* Make the header sticky */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

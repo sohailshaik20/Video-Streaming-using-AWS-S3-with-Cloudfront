@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include the same head content as index.html -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        /* Add CSS rules to style the videos */
+        body{
+            background: url("https://res.cloudinary.com/di0n6iipc/image/upload/v1694542365/vb_rizuvt.jpg");
+            
+        }
+        header {
+            position: fixed;
+            top: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px; /* Set a maximum width for the container */
+            margin: 0 auto; /* Center-align the container */
+            align-items: center;
+            color: #fff;
+        }
+
+        .videos li {
+            flex: 0 0 calc(33.33% - 20px); /* Set the width for each video item with spacing */
+            margin: 10px; /* Add some spacing between videos */
+            text-align: center; /* Center-align the video within its container */
+        }
+
+        .videos li video {
+            width: 1200px; /* Set the desired fixed width for the videos */
+            height: 1000px; /* Set the desired fixed height for the videos */
+            max-width: 100%; /* Ensure the video doesn't exceed the container's width */
+            max-height: 100%; /* Ensure the video doesn't exceed the container's height */
+            background-color: rgb(227, 227, 238);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="videos.html">Explore Videos</a></li>
+                <li><a href="audios.html">Explore Audios</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <!-- Add more relevant links -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Videos -->
+        <section class="videos">
+            <h2>All Videos</h2>
+            <ul>
+                <!-- Your video list here -->
+                <li id="video1">
+                    <h3>Video 1</h3>
+                    <video controls id="video1Player">
+                        <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694493024/VN20230503_024624_lsniec.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+
+                <!-- Repeat this structure for all videos -->
+                <li id="video2">
+                    <h3>Video 2</h3>
+                    <video controls id="video2Player">
+                        <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694494035/rgmcet09-20230912-0001_dgjcwh.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li id="video3">
+                    <h3>Video 3</h3>
+                    <video controls id="video3Player">
+                        <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694494620/Justin_Bieber_-_Never_Say_Never_ft._Jaden_720p_csdmsu.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li id="video4">
+                    <h3>Video 4</h3>
+                    <video controls id="video4Player">
+                        <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694494646/The_world_is_your__Motivation_video__Abu_Salim__480p_ldrlxe.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+                <li id="video5">
+                    <h3>Video 5</h3>
+                    <video controls id="video5Player">
+                        <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694494567/You_ve_lost_again_and_again_and_again__motivation_1080p60_upsijn.mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+    </div>
+    <div class="footer-email-signup">
+        <h3>Stay in the Loop!</h3>
+        <h6>Subscribe to get the latest updates, exclusive content, and more delivered straight to your inbox.</h6>
+        <form>
+            <input type="email" placeholder="Your Gmail ID" required style="width: 30%; padding: 8px;">
+            <button type="submit">Get Updates</button>
+        </form>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Tech Titans. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        const videoPlayers = document.querySelectorAll('video');
+
+        videoPlayers.forEach((player) => {
+            player.addEventListener('play', () => {
+                // Pause all other videos when one is playing
+                videoPlayers.forEach((otherPlayer) => {
+                    if (otherPlayer !== player && !otherPlayer.paused) {
+                        otherPlayer.pause();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

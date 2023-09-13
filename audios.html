@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include the same head content as index.html -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://res.cloudinary.com/di0n6iipc/image/upload/v1689757404/pexels-bob-clark-1135995_mz0wo7.jpg");
+            width: auto;
+            background-size: cover; /* Adjust the size as needed */
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* This property makes the background fixed to the viewport */
+        }
+
+        header {
+            /* position: fixed; */
+            /* top: 0; */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .audios {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 50px; /* Adjust the gap value as needed */
+    }
+        /* .audio-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        } */
+
+        .audio-title {
+        position: absolute;
+        top: -30px; /* Adjust this value to control the vertical position */
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 16px; /* Adjust font size as needed */
+    }
+
+    .audio-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .audio-item:hover .audio-title {
+        top: 50%; /* Move the title to the middle of the audio item on hover */
+        transform: translate(0, -50%);
+    }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Play/Pause Button */
+        .play-pause-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        .audio-item:hover .play-pause-button {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="videos.html">Explore Videos</a></li>
+                <li><a href="audios.html">Explore Audios</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <!-- Add more relevant links -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Audios -->
+        <section class="audios">
+            <h2>All Audios</h2>
+            <div class="audio-item" data-audio="audio1">
+                <div class="audio-title"><h3>Not Ramaiya Vastavaiya Jawan</h3></div>
+                <audio id="audio1" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496641/Not_Ramaiya_Vastavaiya_Jawan_128_Kbps_a2wgtf.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <div class="audio-item" data-audio="audio2">
+                <div class="audio-title">What Jhumka</div>
+                <audio id="audio2" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496663/What_Jhumka-_PagalWorld_dcdm0e.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <div class="audio-item" data-audio="audio3">
+                <div class="audio-title">Chaleya Jawan</div>
+                <audio id="audio3" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496681/Chaleya_Jawan_128_Kbps_klzvcm.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <div class="audio-item" data-audio="audio4">
+                <div class="audio-title">Shiddat</div>
+                <audio id="audio4" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496721/Shiddat_Title_Track_-_Shiddat_128_Kbps_cf3hz1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <div class="audio-item" data-audio="audio5">
+                <div class="audio-title">Asha Pasham</div>
+                <audio id="audio5" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496738/Siggu-Mullu-Gappi_ythunj.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <div class="audio-item" data-audio="audio6">
+                <div class="audio-title">Hukum</div>
+                <audio id="audio6" controls preload="auto">
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694496702/iSongs.info_04_-_Hukum_azm94h.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="play-pause-button">Play</div>
+            </div>
+            <!-- Add more audio items as needed -->
+        </section>
+    </main>
+    <footer>
+    </div>
+    <div class="footer-email-signup">
+        <h3>Stay in the Loop!</h3>
+        <h6>Subscribe to get the latest updates, exclusive content, and more delivered straight to your inbox.</h6>
+        <form>
+            <input type="email" placeholder="Your Gmail ID" required style="width: 30%; padding: 8px;">
+            <button type="submit">Get Updates</button>
+        </form>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Tech Titans. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script>
+        var audioElements = document.querySelectorAll("audio");
+
+        audioElements.forEach(function(audio) {
+            audio.addEventListener("play", function() {
+                pauseAllOtherAudio(audio.id);
+                togglePlayPauseButton(audio.id, true);
+            });
+
+            audio.addEventListener("pause", function() {
+                togglePlayPauseButton(audio.id, false);
+            });
+        });
+
+        function pauseAllOtherAudio(currentAudioId) {
+            audioElements.forEach(function(audio) {
+                if (audio.id !== currentAudioId) {
+                    audio.pause();
+                }
+            });
+        }
+
+        function togglePlayPauseButton(audioId, isPlaying) {
+            var playPauseButton = document.querySelector(`[data-audio="${audioId}"] .play-pause-button`);
+            playPauseButton.textContent = isPlaying ? "Pause" : "Play";
+        }
+    </script>
+</body>
+</html>

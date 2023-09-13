@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Web Server</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional homepage styles */
+        .welcome-banner {
+            background-image: url("https://res.cloudinary.com/di0n6iipc/image/upload/v1689749838/pexels-moose-photos-1037992_dth26j.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        .welcome-banner h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-banner p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .call-to-action {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .call-to-action a {
+            display: inline-block;
+            background-color: rgb(110, 81, 192);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for a subtle hover effect */
+        }
+
+        .call-to-action a:hover {
+            background-color: #c9409b;
+            transform: scale(1.05); /* Scale the button slightly on hover */
+        }
+
+        /* Add margin to the second button */
+        .call-to-action a + a {
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="videos.html">Explore Videos</a></li> <!-- Updated button text -->
+                <li><a href="audios.html">Explore Audios</a></li> <!-- Updated button text -->
+                <li><a href="about.html">About Us</a></li>
+                <!-- Add more relevant links -->
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Welcome Banner -->
+        <section class="welcome-banner">
+            <h1>Welcome to Our Streaming Web Server</h1>
+            <p>Discover a world of entertainment with our collection of high-quality videos and audios. Whether you're into movies, music, or more, we've got you covered.</p>
+            <div class="call-to-action">
+                <a href="videos.html">Explore Videos</a>
+                <a href="audios.html">Explore Audios</a>
+            </div>
+        </section>
+
+        <!-- Featured Video -->
+        <section class="featured-video">
+            <h2>Featured Video</h2>
+            <div class="video-container">
+                <video controls autoplay>
+                    <source src="https://res.cloudinary.com/di0n6iipc/video/upload/v1694493024/VN20230503_024624_lsniec.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+    <footer>
+        </div>
+        <div class="footer-email-signup">
+            <h3>Stay in the Loop!</h3>
+            <h6>Subscribe to get the latest updates, exclusive content, and more delivered straight to your inbox.</h6>
+            <form>
+                <input type="email" placeholder="Your Gmail ID" required style="width: 30%; padding: 8px;">
+                <button type="submit">Get Updates</button>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Tech Titans. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
